@@ -23,6 +23,7 @@ class CategoriesStream implements Disposable {
     _categoriesStream.stream.listen(_fetchCategories);
   }
 
+
   Future<void> _fetchFirstTime() async {
     categories = await helpersApi.fetchCategories();
   }
