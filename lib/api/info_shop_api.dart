@@ -12,7 +12,7 @@ class InfoShopApi {
   Future<List<InfoShop>> fetchInfoShop(int page) async {
     await checkInternet();
     String url = ApiUtl.INFO_SHOP + '?page=' + page.toString();
-    http.Response response = await http.get(url, headers: headers);
+    http.Response response = await http.get(Uri.parse(url), headers: headers);
     print(url);
     switch (response.statusCode) {
       case 200:

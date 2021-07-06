@@ -20,8 +20,8 @@ class Authentication {
       'mobile': mobile,
       'password': password,
     };
-    http.Response response =
-        await http.post(ApiUtl.AUTH_REGISTER, headers: headers, body: body);
+    http.Response response = await http.post(Uri.parse(ApiUtl.AUTH_REGISTER),
+        headers: headers, body: body);
     switch (response.statusCode) {
       case 201:
         var body = jsonDecode(response.body);
@@ -46,8 +46,8 @@ class Authentication {
       'password': password,
     };
 
-    http.Response response =
-        await http.post(ApiUtl.AUTH_LOGIN, headers: headers, body: body);
+    http.Response response = await http.post(Uri.parse(ApiUtl.AUTH_LOGIN),
+        headers: headers, body: body);
     print(response);
     switch (response.statusCode) {
       case 200:

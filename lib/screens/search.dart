@@ -162,8 +162,8 @@ class _HomeSearchState extends State<HomeSearch> {
   }
 
   fech() async {
-    final responce =
-        await http.get('http://shop.myadeentrading.com/api/showProduct');
+    final responce = await http
+        .get(Uri.parse('http://shop.myadeentrading.com/api/showProduct'));
     if (responce.statusCode == 200) {
       setState(() {
         _productDisplay.add(json.decode(responce.body)['massage']);

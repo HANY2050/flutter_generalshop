@@ -1,19 +1,21 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:generalshops/screens/home_page.dart';
-import 'package:generalshops/screens/onboarding/onboarding.dart';
+import 'package:generalshops/screens/register_screen.dart';
+import 'package:generalshops/screens/signUp.dart';
 import 'package:generalshops/screens/utilities/screen_utilities.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   var pref = await SharedPreferences.getInstance();
   bool isSeen = pref.getBool('is_seen');
-  Widget homePage = HomePage();
+  Widget homePage = RegisterScreen();
 
   if (isSeen == null || !isSeen) {
-    homePage = OnBoarding();
+    homePage = SignUpPage();
   }
 
   runApp(GeneralShop(homePage));

@@ -15,7 +15,7 @@ class HelpersApi {
   Future<List<ProductCategory>> fetchCategories() async {
     await checkInternet();
     String url = ApiUtl.CATEGORIES;
-    http.Response response = await http.get(url, headers: headers);
+    http.Response response = await http.get(Uri.parse(url), headers: headers);
     //print(url);
     switch (response.statusCode) {
       case 200:
@@ -47,7 +47,7 @@ class HelpersApi {
     await checkInternet();
     String url = ApiUtl.TAGS + '?page=' + page.toString();
 
-    http.Response response = await http.get(url, headers: headers);
+    http.Response response = await http.get(Uri.parse(url), headers: headers);
 
     switch (response.statusCode) {
       case 200:
@@ -78,7 +78,7 @@ class HelpersApi {
   Future<List<Country>> fetchCountries(int page) async {
     await checkInternet();
     String url = ApiUtl.COUNTRIES + '?page=' + page.toString();
-    http.Response response = await http.get(url, headers: headers);
+    http.Response response = await http.get(Uri.parse(url), headers: headers);
 
     switch (response.statusCode) {
       case 200:
@@ -109,7 +109,7 @@ class HelpersApi {
     await checkInternet();
     String url = ApiUtl.STATES(country) + '?page=' + page.toString();
 
-    http.Response response = await http.get(url, headers: headers);
+    http.Response response = await http.get(Uri.parse(url), headers: headers);
 
     switch (response.statusCode) {
       case 200:
@@ -139,7 +139,7 @@ class HelpersApi {
   Future<List<CountryCity>> fetchCities(int country, int page) async {
     await checkInternet();
     String url = ApiUtl.CITIES(country) + '?page=' + page.toString();
-    http.Response response = await http.get(url, headers: headers);
+    http.Response response = await http.get(Uri.parse(url), headers: headers);
 
     switch (response.statusCode) {
       case 200:

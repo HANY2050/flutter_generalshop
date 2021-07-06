@@ -18,7 +18,8 @@ class CartApi {
       'Authorization': 'Bearer ' + apiToken
     };
     String cartApi = ApiUtl.CART;
-    http.Response response = await http.get(cartApi, headers: authHeaders);
+    http.Response response =
+        await http.get(Uri.parse(cartApi), headers: authHeaders);
 
     switch (response.statusCode) {
       case 200:
@@ -49,7 +50,7 @@ class CartApi {
     };
 
     http.Response response =
-        await http.post(cartApi, headers: authHeaders, body: body);
+        await http.post(Uri.parse(cartApi), headers: authHeaders, body: body);
 
     switch (response.statusCode) {
       case 200:
@@ -80,7 +81,8 @@ class CartApi {
       /*'qty': 1.toString()*/
     };
 
-    http.Response response = await http.delete(cartApi, headers: authHeaders);
+    http.Response response =
+        await http.delete(Uri.parse(cartApi), headers: authHeaders);
 
     switch (response.statusCode) {
       case 200:
@@ -107,7 +109,8 @@ class CartApi {
       /*'qty': 1.toString()*/
     };
 
-    http.Response response = await http.delete(cartApi, headers: authHeaders);
+    http.Response response =
+        await http.delete(Uri.parse(cartApi), headers: authHeaders);
 
     switch (response.statusCode) {
       case 200:
@@ -135,7 +138,7 @@ class CartApi {
     };
 
     http.Response response =
-        await http.post(cartApi, headers: authHeaders, body: body);
+        await http.post(Uri.parse(cartApi), headers: authHeaders, body: body);
 
     switch (response.statusCode) {
       case 200:

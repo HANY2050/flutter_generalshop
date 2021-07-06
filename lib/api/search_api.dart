@@ -11,8 +11,8 @@ List<Product> parseProduct(String responseBody) {
 }
 
 Future<List<Product>> fetchProduct() async {
-  final responce =
-      await http.get('http://shop.myadeentrading.com/api/showProduct');
+  final responce = await http
+      .get(Uri.parse('http://shop.myadeentrading.com/api/showProduct'));
   if (responce.statusCode == 200) {
     return compute(parseProduct, responce.body);
   } else {

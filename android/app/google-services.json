@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "699589552517",
+    "project_id": "general-shops-4d0aa",
+    "storage_bucket": "general-shops-4d0aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699589552517:android:70ce3f600256c699033cec",
+        "android_client_info": {
+          "package_name": "com.example.generalshops"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "699589552517-j426lp5qagchdjd3gulfb3fmha67i4vu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.generalshops",
+            "certificate_hash": "0d66c790d660e749607ff67e96117f24e623d0da"
+          }
+        },
+        {
+          "client_id": "699589552517-nfi3v237omtccfvqa1olodthi70vsovs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbaWZA3vYaDy1ssU4T1AvwGhmmIINbrX0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "699589552517-nfi3v237omtccfvqa1olodthi70vsovs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
